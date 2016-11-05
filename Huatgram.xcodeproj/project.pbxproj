@@ -8,20 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		670262AB1DCC90E6000FEC48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262AA1DCC90E6000FEC48 /* AppDelegate.swift */; };
-		670262AD1DCC90E6000FEC48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262AC1DCC90E6000FEC48 /* ViewController.swift */; };
+		670262AD1DCC90E6000FEC48 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262AC1DCC90E6000FEC48 /* SplashViewController.swift */; };
 		670262B01DCC90E6000FEC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670262AE1DCC90E6000FEC48 /* Main.storyboard */; };
 		670262B21DCC90E6000FEC48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 670262B11DCC90E6000FEC48 /* Assets.xcassets */; };
 		670262B51DCC90E6000FEC48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670262B31DCC90E6000FEC48 /* LaunchScreen.storyboard */; };
+		670262BD1DCDAEB2000FEC48 /* LoginUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262BC1DCDAEB2000FEC48 /* LoginUserViewController.swift */; };
+		670262BF1DCDAEBD000FEC48 /* LoginPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262BE1DCDAEBD000FEC48 /* LoginPasswordViewController.swift */; };
+		670262C11DCDAECF000FEC48 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262C01DCDAECF000FEC48 /* HomeViewController.swift */; };
+		670262C31DCDAED8000FEC48 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262C21DCDAED8000FEC48 /* ProfileViewController.swift */; };
+		670262C51DCDAEE3000FEC48 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262C41DCDAEE3000FEC48 /* EditProfileViewController.swift */; };
+		670262C71DCDAF69000FEC48 /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262C61DCDAF69000FEC48 /* SideBarViewController.swift */; };
+		670262C91DCDAF8E000FEC48 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262C81DCDAF8E000FEC48 /* CustomNavBar.swift */; };
+		670262CB1DCDB257000FEC48 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262CA1DCDB257000FEC48 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		670262A71DCC90E6000FEC48 /* Huatgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huatgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		670262AA1DCC90E6000FEC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		670262AC1DCC90E6000FEC48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		670262AC1DCC90E6000FEC48 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		670262AF1DCC90E6000FEC48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		670262B11DCC90E6000FEC48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		670262B41DCC90E6000FEC48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		670262B61DCC90E6000FEC48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		670262BC1DCDAEB2000FEC48 /* LoginUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUserViewController.swift; sourceTree = "<group>"; };
+		670262BE1DCDAEBD000FEC48 /* LoginPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPasswordViewController.swift; sourceTree = "<group>"; };
+		670262C01DCDAECF000FEC48 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		670262C21DCDAED8000FEC48 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		670262C41DCDAEE3000FEC48 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		670262C61DCDAF69000FEC48 /* SideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
+		670262C81DCDAF8E000FEC48 /* CustomNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
+		670262CA1DCDB257000FEC48 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +71,19 @@
 			isa = PBXGroup;
 			children = (
 				670262AA1DCC90E6000FEC48 /* AppDelegate.swift */,
-				670262AC1DCC90E6000FEC48 /* ViewController.swift */,
+				670262AC1DCC90E6000FEC48 /* SplashViewController.swift */,
 				670262AE1DCC90E6000FEC48 /* Main.storyboard */,
 				670262B11DCC90E6000FEC48 /* Assets.xcassets */,
 				670262B31DCC90E6000FEC48 /* LaunchScreen.storyboard */,
 				670262B61DCC90E6000FEC48 /* Info.plist */,
+				670262BC1DCDAEB2000FEC48 /* LoginUserViewController.swift */,
+				670262BE1DCDAEBD000FEC48 /* LoginPasswordViewController.swift */,
+				670262C01DCDAECF000FEC48 /* HomeViewController.swift */,
+				670262C21DCDAED8000FEC48 /* ProfileViewController.swift */,
+				670262C41DCDAEE3000FEC48 /* EditProfileViewController.swift */,
+				670262C61DCDAF69000FEC48 /* SideBarViewController.swift */,
+				670262C81DCDAF8E000FEC48 /* CustomNavBar.swift */,
+				670262CA1DCDB257000FEC48 /* CameraViewController.swift */,
 			);
 			path = Huatgram;
 			sourceTree = "<group>";
@@ -96,7 +120,7 @@
 				TargetAttributes = {
 					670262A61DCC90E6000FEC48 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = PBF5QD74E4;
+						DevelopmentTeam = 39Y254F4U3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,8 +161,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				670262AD1DCC90E6000FEC48 /* ViewController.swift in Sources */,
+				670262C31DCDAED8000FEC48 /* ProfileViewController.swift in Sources */,
+				670262CB1DCDB257000FEC48 /* CameraViewController.swift in Sources */,
+				670262C11DCDAECF000FEC48 /* HomeViewController.swift in Sources */,
+				670262AD1DCC90E6000FEC48 /* SplashViewController.swift in Sources */,
+				670262C91DCDAF8E000FEC48 /* CustomNavBar.swift in Sources */,
+				670262BF1DCDAEBD000FEC48 /* LoginPasswordViewController.swift in Sources */,
+				670262BD1DCDAEB2000FEC48 /* LoginUserViewController.swift in Sources */,
 				670262AB1DCC90E6000FEC48 /* AppDelegate.swift in Sources */,
+				670262C51DCDAEE3000FEC48 /* EditProfileViewController.swift in Sources */,
+				670262C71DCDAF69000FEC48 /* SideBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PBF5QD74E4;
+				DEVELOPMENT_TEAM = 39Y254F4U3;
 				INFOPLIST_FILE = Huatgram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chisin.Huatgram;
@@ -274,7 +306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PBF5QD74E4;
+				DEVELOPMENT_TEAM = 39Y254F4U3;
 				INFOPLIST_FILE = Huatgram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chisin.Huatgram;
