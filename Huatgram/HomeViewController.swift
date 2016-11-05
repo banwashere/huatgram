@@ -85,7 +85,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let userId = result["userId"] as! String
         let imageUrl = result["imageUrl"] as! String
         let contentText = result["contentText"] as! String
-        let huatPost = HuatPost(userId: userId, imageUrl: imageUrl, contentText: contentText, arrayOfLike: [], arrayOfComments: [])
+            let huatPost = HuatPost(userId: userId, imageUrl: imageUrl, contentText: contentText, arrayOfLike: [], arrayOfComments: [], postId: snapshot.key)
             
             
             

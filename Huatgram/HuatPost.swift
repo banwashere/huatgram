@@ -11,13 +11,14 @@ import Firebase
 
 class HuatPost {
     
+    var postId: String?
     var userId: String
     var imageUrl: String
     var contentText: String
     var arrayOfLike: [String]
     var arrayOfComments: [HuatComment]
     
-    init(userId: String, imageUrl: String, contentText: String, arrayOfLike: [String], arrayOfComments: [HuatComment]){
+    init(userId: String, imageUrl: String, contentText: String, arrayOfLike: [String], arrayOfComments: [HuatComment], postId: String?){
         
         self.userId = userId
         self.imageUrl = imageUrl
@@ -25,6 +26,10 @@ class HuatPost {
         self.arrayOfLike = arrayOfLike
         self.arrayOfComments = arrayOfComments
         
+        if let postId = postId{
+            
+            self.postId = postId
+        }
         
     }
     //save to firebase

@@ -8,6 +8,7 @@
 
 import UIKit
 import KFSwiftImageLoader
+import Firebase
 
 class HuatPostTableViewCell: UITableViewCell {
 
@@ -15,7 +16,9 @@ class HuatPostTableViewCell: UITableViewCell {
     @IBOutlet weak var likeBtn : UIButton!
     @IBOutlet weak var commentBtn : UIButton!
     @IBOutlet weak var commentLbl : UILabel!
+    @IBOutlet weak var likeCount: UILabel!
     
+    var currentPost: HuatPost?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,10 +31,33 @@ class HuatPostTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(huatPost:HuatPost){
+    @IBAction func likeAction(_ sender: Any) {
         
+        let databaseRef = FIRDatabase.database().reference()
+        let postRef = databaseRef.child("HuatPost")
+        let currentPostref = postRef.child(currentPost!.postId!)
+        let arryOfLikeRef = currentPostref.child("arrayOfLike")
+        let newLike = arryOfLikeRef.child(FIRAuth.auth()!.currentUser!.uid)
+       
+        
+        newLike.setValue(true) { (error, ref) in
+            
+            if error != nil{
+                
+                print("error")
+            }
+        }
+        
+    }
+    
+    @IBAction func commentAction(_ sender: Any) {
+    }
+    
+    func configureCell(huatPost:HuatPost){
+        currentPost = huatPost
         huatImageView.loadImage(urlString: huatPost.imageUrl)
         commentLbl.text = huatPost.contentText
+        likeCount.text = "\(huatPost.arrayOfLike.count) Likes"
     
     }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SplashViewController: UIViewController {
 
@@ -21,6 +22,15 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let currentUser = FIRAuth.auth()?.currentUser
+        if currentUser != nil{
+            
+            performSegue(withIdentifier: "existingUser", sender: nil)
+            
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
