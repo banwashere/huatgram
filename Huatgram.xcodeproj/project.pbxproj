@@ -20,6 +20,8 @@
 		670262C71DCDAF69000FEC48 /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262C61DCDAF69000FEC48 /* SideBarViewController.swift */; };
 		670262C91DCDAF8E000FEC48 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262C81DCDAF8E000FEC48 /* CustomNavBar.swift */; };
 		670262CB1DCDB257000FEC48 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262CA1DCDB257000FEC48 /* CameraViewController.swift */; };
+		8573D35B1DCDB6FE0010F2C6 /* HuatComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573D3591DCDB6FE0010F2C6 /* HuatComment.swift */; };
+		8573D35C1DCDB6FE0010F2C6 /* HuatPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573D35A1DCDB6FE0010F2C6 /* HuatPost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		670262C61DCDAF69000FEC48 /* SideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
 		670262C81DCDAF8E000FEC48 /* CustomNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		670262CA1DCDB257000FEC48 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		8573D3591DCDB6FE0010F2C6 /* HuatComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuatComment.swift; sourceTree = "<group>"; };
+		8573D35A1DCDB6FE0010F2C6 /* HuatPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuatPost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				670262B11DCC90E6000FEC48 /* Assets.xcassets */,
 				670262B31DCC90E6000FEC48 /* LaunchScreen.storyboard */,
 				670262B61DCC90E6000FEC48 /* Info.plist */,
+				8573D3591DCDB6FE0010F2C6 /* HuatComment.swift */,
+				8573D35A1DCDB6FE0010F2C6 /* HuatPost.swift */,
 				670262BC1DCDAEB2000FEC48 /* LoginUserViewController.swift */,
 				670262BE1DCDAEBD000FEC48 /* LoginPasswordViewController.swift */,
 				670262C01DCDAECF000FEC48 /* HomeViewController.swift */,
@@ -166,8 +172,10 @@
 				670262C11DCDAECF000FEC48 /* HomeViewController.swift in Sources */,
 				670262AD1DCC90E6000FEC48 /* SplashViewController.swift in Sources */,
 				670262C91DCDAF8E000FEC48 /* CustomNavBar.swift in Sources */,
+				8573D35C1DCDB6FE0010F2C6 /* HuatPost.swift in Sources */,
 				670262BF1DCDAEBD000FEC48 /* LoginPasswordViewController.swift in Sources */,
 				670262BD1DCDAEB2000FEC48 /* LoginUserViewController.swift in Sources */,
+				8573D35B1DCDB6FE0010F2C6 /* HuatComment.swift in Sources */,
 				670262AB1DCC90E6000FEC48 /* AppDelegate.swift in Sources */,
 				670262C51DCDAEE3000FEC48 /* EditProfileViewController.swift in Sources */,
 				670262C71DCDAF69000FEC48 /* SideBarViewController.swift in Sources */,
@@ -334,6 +342,7 @@
 				670262BB1DCC90E6000FEC48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
