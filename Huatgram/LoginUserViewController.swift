@@ -10,6 +10,8 @@ import UIKit
 
 class LoginUserViewController: UIViewController {
 
+    @IBOutlet weak var userNameTxt: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +23,23 @@ class LoginUserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func nextAction(_ sender: AnyObject) {
+    }
 
+    @IBAction func backAction(_ sender: AnyObject) {
+        _ = self.navigationController?.popViewController(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoPassword" {
+            let detailViewController = segue.destination as! LoginPasswordViewController
+            
+            detailViewController.email = userNameTxt.text
+            
+            //detailViewController.selectedCoor = selectedLocation
+        }
+
+    }
     /*
     // MARK: - Navigation
 

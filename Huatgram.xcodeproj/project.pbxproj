@@ -22,9 +22,12 @@
 		670262CB1DCDB257000FEC48 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262CA1DCDB257000FEC48 /* CameraViewController.swift */; };
 		8573D35B1DCDB6FE0010F2C6 /* HuatComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573D3591DCDB6FE0010F2C6 /* HuatComment.swift */; };
 		8573D35C1DCDB6FE0010F2C6 /* HuatPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573D35A1DCDB6FE0010F2C6 /* HuatPost.swift */; };
+		91912B59AB45396A971D43F1 /* Pods_Huatgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA365758DEBD9E621AA62763 /* Pods_Huatgram.framework */; };
+		A37D8BCE1DCDBC2600A8FF38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A37D8BCD1DCDBC2600A8FF38 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5765E142A87D580525000FC5 /* Pods-Huatgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huatgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Huatgram/Pods-Huatgram.debug.xcconfig"; sourceTree = "<group>"; };
 		670262A71DCC90E6000FEC48 /* Huatgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huatgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		670262AA1DCC90E6000FEC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		670262AC1DCC90E6000FEC48 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +45,9 @@
 		670262CA1DCDB257000FEC48 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		8573D3591DCDB6FE0010F2C6 /* HuatComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuatComment.swift; sourceTree = "<group>"; };
 		8573D35A1DCDB6FE0010F2C6 /* HuatPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuatPost.swift; sourceTree = "<group>"; };
+		A29E44EDFCB1B7965F7D7337 /* Pods-Huatgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huatgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Huatgram/Pods-Huatgram.release.xcconfig"; sourceTree = "<group>"; };
+		A37D8BCD1DCDBC2600A8FF38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FA365758DEBD9E621AA62763 /* Pods_Huatgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Huatgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +55,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91912B59AB45396A971D43F1 /* Pods_Huatgram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		208806C8F8F2B6080B440FD0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5765E142A87D580525000FC5 /* Pods-Huatgram.debug.xcconfig */,
+				A29E44EDFCB1B7965F7D7337 /* Pods-Huatgram.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6702629E1DCC90E6000FEC48 = {
 			isa = PBXGroup;
 			children = (
 				670262A91DCC90E6000FEC48 /* Huatgram */,
 				670262A81DCC90E6000FEC48 /* Products */,
+				208806C8F8F2B6080B440FD0 /* Pods */,
+				7351E88CD408A47D43313628 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +98,7 @@
 				670262B11DCC90E6000FEC48 /* Assets.xcassets */,
 				670262B31DCC90E6000FEC48 /* LaunchScreen.storyboard */,
 				670262B61DCC90E6000FEC48 /* Info.plist */,
+				A37D8BCD1DCDBC2600A8FF38 /* GoogleService-Info.plist */,
 				8573D3591DCDB6FE0010F2C6 /* HuatComment.swift */,
 				8573D35A1DCDB6FE0010F2C6 /* HuatPost.swift */,
 				670262BC1DCDAEB2000FEC48 /* LoginUserViewController.swift */,
@@ -94,6 +113,14 @@
 			path = Huatgram;
 			sourceTree = "<group>";
 		};
+		7351E88CD408A47D43313628 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA365758DEBD9E621AA62763 /* Pods_Huatgram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 670262B91DCC90E6000FEC48 /* Build configuration list for PBXNativeTarget "Huatgram" */;
 			buildPhases = (
+				FFAB25224BC9862767C0B3A4 /* [CP] Check Pods Manifest.lock */,
 				670262A31DCC90E6000FEC48 /* Sources */,
 				670262A41DCC90E6000FEC48 /* Frameworks */,
 				670262A51DCC90E6000FEC48 /* Resources */,
+				9511D764E000B00FA1010248 /* [CP] Embed Pods Frameworks */,
+				D588A018BBF66B93C9ABBE67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,12 +185,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				670262B51DCC90E6000FEC48 /* LaunchScreen.storyboard in Resources */,
+				A37D8BCE1DCDBC2600A8FF38 /* GoogleService-Info.plist in Resources */,
 				670262B21DCC90E6000FEC48 /* Assets.xcassets in Resources */,
 				670262B01DCC90E6000FEC48 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9511D764E000B00FA1010248 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Huatgram/Pods-Huatgram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D588A018BBF66B93C9ABBE67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Huatgram/Pods-Huatgram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFAB25224BC9862767C0B3A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		670262A31DCC90E6000FEC48 /* Sources */ = {
@@ -299,6 +378,7 @@
 		};
 		670262BA1DCC90E6000FEC48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5765E142A87D580525000FC5 /* Pods-Huatgram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 39Y254F4U3;
@@ -312,6 +392,7 @@
 		};
 		670262BB1DCC90E6000FEC48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A29E44EDFCB1B7965F7D7337 /* Pods-Huatgram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 39Y254F4U3;

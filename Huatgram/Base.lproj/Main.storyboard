@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="il9-C7-5kv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="il9-C7-5kv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lqf-pm-okk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bG" translatesAutoresizingMaskIntoConstraints="NO" id="Lqf-pm-okk">
                                 <frame key="frameInset" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R8e-y1-YwR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="huatgramLogo" translatesAutoresizingMaskIntoConstraints="NO" id="R8e-y1-YwR">
                                 <frame key="frameInset" minX="67" minY="124" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -32,7 +32,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="Gmm-hj-o67" kind="show" id="85N-NJ-kbc"/>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WdG-1u-Pxt"/>
+                                    <segue destination="Gmm-hj-o67" kind="show" id="hA6-XM-i6H"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFg-P7-JHK">
@@ -40,21 +41,33 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NNI-e7-Zx9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guP-3S-quf">
                                 <frame key="frameInset" minX="109" minY="500" width="157" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Facebook"/>
+                                <connections>
+                                    <action selector="facebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k8S-gp-YxF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="lew-0h-Yg5"/>
+                    <connections>
+                        <outlet property="facebookBtn" destination="guP-3S-quf" id="gQQ-Pc-DDx"/>
+                        <outlet property="loginBtn" destination="uwc-jY-B6g" id="sfs-Z1-fIb"/>
+                        <outlet property="logo" destination="R8e-y1-YwR" id="we2-LO-zsv"/>
+                        <outlet property="registerBtn" destination="rFg-P7-JHK" id="C8U-Vf-fhS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.5999999999999" y="124.58770614692655"/>
+            <point key="canvasLocation" x="2020" y="125"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gUz-TZ-jld">
@@ -87,7 +100,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BEn-W9-6DU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bG" translatesAutoresizingMaskIntoConstraints="NO" id="BEn-W9-6DU">
                                 <frame key="frameInset" width="375" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -110,12 +123,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="uQi-dY-hsM" kind="show" id="4ff-Ah-i1Q"/>
+                                    <action selector="nextAction:" destination="M7S-bZ-IAg" eventType="touchUpInside" id="kDR-et-fO1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUY-sh-bZI">
+                                <frame key="frameInset" minX="15" minY="10" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backAction:" destination="M7S-bZ-IAg" eventType="touchUpInside" id="3oo-aF-hPT"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTxt" destination="wz7-yI-oCh" id="CKg-P3-TYM"/>
+                        <segue destination="uQi-dY-hsM" kind="show" identifier="gotoHome" id="BI1-8v-JJz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOi-JX-miA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,7 +199,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="7A5-iR-qzu"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="webPageHome" id="7A5-iR-qzu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGi-qJ-WON" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,7 +236,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Camera" id="8TQ-4u-qNK"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="photoCamera1" id="8TQ-4u-qNK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxb-zA-ahf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -288,7 +313,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="ybG-o5-veA"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="smilingFace" id="ybG-o5-veA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBX-lt-cEV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -355,7 +380,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="reA-7F-R3a">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bG" translatesAutoresizingMaskIntoConstraints="NO" id="reA-7F-R3a">
                                 <frame key="frameInset" width="375" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -378,12 +403,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="M7S-bZ-IAg" kind="show" id="dfb-zv-mvB"/>
+                                    <action selector="nextAction:" destination="Gmm-hj-o67" eventType="touchUpInside" id="hL6-Gg-L51"/>
+                                    <segue destination="M7S-bZ-IAg" kind="show" identifier="gotoPassword" id="dfb-zv-mvB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puB-tU-H0v">
+                                <frame key="frameInset" minX="22" minY="10" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backAction:" destination="Gmm-hj-o67" eventType="touchUpInside" id="g2r-Vo-llt"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="userNameTxt" destination="6Nl-10-07g" id="KYn-qP-xL4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biE-o2-1jU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -403,7 +440,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRA-Lo-vkA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1005" y="125"/>
+            <point key="canvasLocation" x="1167" y="125"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bG" width="375" height="667"/>
+        <image name="huatgramLogo" width="195" height="97"/>
+        <image name="photoCamera1" width="28" height="22"/>
+        <image name="smilingFace" width="25" height="23"/>
+        <image name="webPageHome" width="26" height="22"/>
+    </resources>
 </document>

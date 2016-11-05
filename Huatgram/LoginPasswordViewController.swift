@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginPasswordViewController: UIViewController {
 
+    @IBOutlet weak var passwordTxt: UITextField!
+    
+    var email: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +26,21 @@ class LoginPasswordViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func nextAction(_ sender: AnyObject) {
+        FIRAuth.auth()?.signIn(withEmail: email!, password: passwordTxt.text!, completion: { (user, error) in
+            
+            if user != nil {
+                self.performSegue(withIdentifier: "gotoHome", sender: nil)
+            }
 
+            }
+        )
+        
+    }
+
+    @IBAction func backAction(_ sender: AnyObject) {
+      _ = self.navigationController?.popViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 
