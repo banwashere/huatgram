@@ -19,6 +19,7 @@ class HuatPostTableViewCell: UITableViewCell {
     @IBOutlet weak var likeCount: UILabel!
     
     var currentPost: HuatPost?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,21 +34,7 @@ class HuatPostTableViewCell: UITableViewCell {
     
     @IBAction func likeAction(_ sender: Any) {
         
-        let databaseRef = FIRDatabase.database().reference()
-        let postRef = databaseRef.child("HuatPost")
-        let currentPostref = postRef.child(currentPost!.postId!)
-        let arryOfLikeRef = currentPostref.child("arrayOfLike")
-        let newLike = arryOfLikeRef.child(FIRAuth.auth()!.currentUser!.uid)
-       
-        
-        newLike.setValue(true) { (error, ref) in
-            
-            if error != nil{
-                
-                print("error")
-            }
-        }
-        
+        currentPost?.addLike()
     }
     
     @IBAction func commentAction(_ sender: Any) {

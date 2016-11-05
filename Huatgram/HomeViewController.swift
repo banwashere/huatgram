@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-
+    
     var arrayOfHuatPost : [HuatPost] = []
     @IBOutlet weak var huatTableView: UITableView!
     
@@ -23,31 +23,31 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         downloadDataFirebase()
         
-//        createTestData()
+        //        createTestData()
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-//    func createTestData(){
-//        
-//        let userId = FIRAuth.auth()!.currentUser!.uid
-//        
-//        
-//        let newHuatPost = HuatPost(userId: userId, imageUrl: "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg", contentText: "Cat is burrito", arrayOfLike: [], arrayOfComments: [])
-//        
-//        let newHuatPost2 = HuatPost(userId: userId, imageUrl: "https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/30423_pets-products_january-site-flip_3-cathealth_short-tile_592x304._CB286975940_.jpg", contentText: "Cat is family", arrayOfLike: [], arrayOfComments: [])
-//        
-//        
-//        newHuatPost.savetoFirebase()
-//        newHuatPost2.savetoFirebase()
-//    
-//    }
-
+    //    func createTestData(){
+    //
+    //        let userId = FIRAuth.auth()!.currentUser!.uid
+    //
+    //
+    //        let newHuatPost = HuatPost(userId: userId, imageUrl: "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg", contentText: "Cat is burrito", arrayOfLike: [], arrayOfComments: [])
+    //
+    //        let newHuatPost2 = HuatPost(userId: userId, imageUrl: "https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/30423_pets-products_january-site-flip_3-cathealth_short-tile_592x304._CB286975940_.jpg", contentText: "Cat is family", arrayOfLike: [], arrayOfComments: [])
+    //
+    //
+    //        newHuatPost.savetoFirebase()
+    //        newHuatPost2.savetoFirebase()
+    //
+    //    }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -67,8 +67,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.configureCell(huatPost: post)
         
         return cell
-
-    
+        
+        
     }
     
     
@@ -80,12 +80,24 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let postRef = databaseRef.child("HuatPost")
         //triggered every time there's a new item in huatpost
         postRef.observe(.childAdded, with: { (snapshot) in
-        
-        let result = snapshot.value as! [String: Any]
-        let userId = result["userId"] as! String
-        let imageUrl = result["imageUrl"] as! String
-        let contentText = result["contentText"] as! String
-            let huatPost = HuatPost(userId: userId, imageUrl: imageUrl, contentText: contentText, arrayOfLike: [], arrayOfComments: [], postId: snapshot.key)
+            
+            let result = snapshot.value as! [String: Any]
+            let userId = result["userId"] as! String
+            let imageUrl = result["imageUrl"] as! String
+            let contentText = result["contentText"] as! String
+            
+            var arrayOfLikes: [String] = []
+            
+            if result["arrayOfLike"] != nil {
+               
+                let likes = result["arrayOfLike"] as! [String: Any]
+                
+                for userId in likes.keys {
+                    arrayOfLikes.append(userId)
+                }
+            }
+            
+            let huatPost = HuatPost(userId: userId, imageUrl: imageUrl, contentText: contentText, arrayOfLike: arrayOfLikes, arrayOfComments: [], postId: snapshot.key)
             
             
             
@@ -93,12 +105,60 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         })
         
-        postRef.observe(.value, with:{ (snapshot) in
+        postRef.observe(.childChanged, with: { (snapshot) in
             
-            self.huatTableView.reloadData()
+            print("HUATPOST CHILD MODIFIED")
+            
+            let postId = snapshot.key
+            
+            //FIND POST
+            let postToUpdate = self.huatPost(postId: postId)!
+            
+            let result = snapshot.value as! [String: Any]
+            
+            let userId = result["userId"] as! String
+            let imageUrl = result["imageUrl"] as! String
+            let contentText = result["contentText"] as! String
+            
+            var arrayOfLikes: [String] = []
+            
+            if result["arrayOfLike"] != nil {
+                
+                let likes = result["arrayOfLike"] as! [String: Any]
+                
+                for userId in likes.keys {
+                    arrayOfLikes.append(userId)
+                }
+            }
+            
+            postToUpdate.userId = userId
+            postToUpdate.imageUrl = imageUrl
+            postToUpdate.contentText = contentText
+            postToUpdate.arrayOfLike = arrayOfLikes
             
         })
-    
+        
+        postRef.observe(.value, with:{ (snapshot) in
+            
+            print("HUATPOST VALUE CHANGED")
+            
+            self.huatTableView.reloadData()
+        })
+        
+        
     }
-
+    
+    func huatPost(postId: String) -> HuatPost? {
+        
+        for post in arrayOfHuatPost {
+            
+            if post.postId == postId {
+                
+                return post
+            }
+        }
+        
+        return nil
+    }
+    
 }
