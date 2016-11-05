@@ -44,12 +44,14 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.0)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
   - GTMSessionFetcher/Core (1.1.7)
+  - KFSwiftImageLoader (3.0.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - KFSwiftImageLoader
 
 SPEC CHECKSUMS:
   Firebase: fdbecadb7b5cbef2774852d4fa659b9daf11f2af
@@ -63,7 +65,8 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  KFSwiftImageLoader: c4656d614329480308b190c2b6f15015a4018ffc
 
-PODFILE CHECKSUM: 76bcd99564cb0658d0d8b2146bc44d5f1a7cbb8c
+PODFILE CHECKSUM: ddb10a75822d2b1b0839f9bac9a44504c2b57b1c
 
 COCOAPODS: 1.1.1

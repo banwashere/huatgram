@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import Firebase
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+    var arrayOfHuatPost : [HuatPost] = []
+    @IBOutlet weak var huatTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        huatTableView.delegate = self
+        huatTableView.dataSource = self
+        
+        downloadDataFirebase()
+        
+//        createTestData()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,15 +33,72 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+//    func createTestData(){
+//        
+//        let userId = FIRAuth.auth()!.currentUser!.uid
+//        
+//        
+//        let newHuatPost = HuatPost(userId: userId, imageUrl: "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg", contentText: "Cat is burrito", arrayOfLike: [], arrayOfComments: [])
+//        
+//        let newHuatPost2 = HuatPost(userId: userId, imageUrl: "https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/30423_pets-products_january-site-flip_3-cathealth_short-tile_592x304._CB286975940_.jpg", contentText: "Cat is family", arrayOfLike: [], arrayOfComments: [])
+//        
+//        
+//        newHuatPost.savetoFirebase()
+//        newHuatPost2.savetoFirebase()
+//    
+//    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
-    */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayOfHuatPost.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "huatPostCell") as! HuatPostTableViewCell
+        
+        //access the array
+        let post = arrayOfHuatPost[indexPath.row]
+        
+        cell.configureCell(huatPost: post)
+        
+        return cell
+
+    
+    }
+    
+    
+    
+    
+    func downloadDataFirebase(){
+        
+        let databaseRef = FIRDatabase.database().reference()
+        let postRef = databaseRef.child("HuatPost")
+        //triggered every time there's a new item in huatpost
+        postRef.observe(.childAdded, with: { (snapshot) in
+        
+        let result = snapshot.value as! [String: Any]
+        let userId = result["userId"] as! String
+        let imageUrl = result["imageUrl"] as! String
+        let contentText = result["contentText"] as! String
+        let huatPost = HuatPost(userId: userId, imageUrl: imageUrl, contentText: contentText, arrayOfLike: [], arrayOfComments: [])
+            
+            
+            
+            self.arrayOfHuatPost.append(huatPost)
+            
+        })
+        
+        postRef.observe(.value, with:{ (snapshot) in
+            
+            self.huatTableView.reloadData()
+            
+        })
+    
+    }
 
 }

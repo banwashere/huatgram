@@ -20,6 +20,7 @@
 		670262C71DCDAF69000FEC48 /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262C61DCDAF69000FEC48 /* SideBarViewController.swift */; };
 		670262C91DCDAF8E000FEC48 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262C81DCDAF8E000FEC48 /* CustomNavBar.swift */; };
 		670262CB1DCDB257000FEC48 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262CA1DCDB257000FEC48 /* CameraViewController.swift */; };
+		670262CD1DCDD033000FEC48 /* HuatPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262CC1DCDD033000FEC48 /* HuatPostTableViewCell.swift */; };
 		8573D35B1DCDB6FE0010F2C6 /* HuatComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573D3591DCDB6FE0010F2C6 /* HuatComment.swift */; };
 		8573D35C1DCDB6FE0010F2C6 /* HuatPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573D35A1DCDB6FE0010F2C6 /* HuatPost.swift */; };
 		91912B59AB45396A971D43F1 /* Pods_Huatgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA365758DEBD9E621AA62763 /* Pods_Huatgram.framework */; };
@@ -43,6 +44,7 @@
 		670262C61DCDAF69000FEC48 /* SideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
 		670262C81DCDAF8E000FEC48 /* CustomNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		670262CA1DCDB257000FEC48 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		670262CC1DCDD033000FEC48 /* HuatPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuatPostTableViewCell.swift; sourceTree = "<group>"; };
 		8573D3591DCDB6FE0010F2C6 /* HuatComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuatComment.swift; sourceTree = "<group>"; };
 		8573D35A1DCDB6FE0010F2C6 /* HuatPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuatPost.swift; sourceTree = "<group>"; };
 		A29E44EDFCB1B7965F7D7337 /* Pods-Huatgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huatgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Huatgram/Pods-Huatgram.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				670262C61DCDAF69000FEC48 /* SideBarViewController.swift */,
 				670262C81DCDAF8E000FEC48 /* CustomNavBar.swift */,
 				670262CA1DCDB257000FEC48 /* CameraViewController.swift */,
+				670262CC1DCDD033000FEC48 /* HuatPostTableViewCell.swift */,
 			);
 			path = Huatgram;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				670262C31DCDAED8000FEC48 /* ProfileViewController.swift in Sources */,
 				670262CB1DCDB257000FEC48 /* CameraViewController.swift in Sources */,
 				670262C11DCDAECF000FEC48 /* HomeViewController.swift in Sources */,
+				670262CD1DCDD033000FEC48 /* HuatPostTableViewCell.swift in Sources */,
 				670262AD1DCC90E6000FEC48 /* SplashViewController.swift in Sources */,
 				670262C91DCDAF8E000FEC48 /* CustomNavBar.swift in Sources */,
 				8573D35C1DCDB6FE0010F2C6 /* HuatPost.swift in Sources */,
