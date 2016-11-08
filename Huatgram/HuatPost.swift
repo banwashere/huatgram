@@ -57,6 +57,26 @@ class HuatPost {
     
     }
     
+    func addLike(){
+        
+        let databaseRef = FIRDatabase.database().reference()
+        let postRef = databaseRef.child("HuatPost")
+        let currentPostRef = postRef.child(self.postId!)
+        let arryOfLikeRef = currentPostRef.child("arrayOfLike")
+        let newLike = arryOfLikeRef.child(FIRAuth.auth()!.currentUser!.uid)
+        
+        
+        newLike.setValue(true) { (error, ref) in
+            
+            if error != nil{
+                
+                print("error")
+            }
+        }
+
+        
+    }
+    
 }
 
 
