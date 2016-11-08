@@ -23,12 +23,23 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         downloadDataFirebase()
         //show popup upon loading
-        let alertController = UIAlertController(title: "Welcome", message: "Hello!", preferredStyle: .alert)
+//        let alertController = UIAlertController(title: "Welcome", message: "Hello!", preferredStyle: .alert)
+//        
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//        
+//        alertController.addAction(cancelAction)
+//        self.present(alertController, animated: true, completion: nil)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let alertController2 = UIAlertController(title: "This is action sheet", message: "sheeeeeet", preferredStyle: .actionSheet)
         
-        alertController.addAction(cancelAction)
-        self.present(alertController, animated: true, completion: nil)
+        let cancelAction2 = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        let newAction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        
+        alertController2.addAction(cancelAction2)
+        alertController2.addAction(newAction)
+        
+        self.present(alertController2, animated: true, completion: nil)
         
 //        createTestData()
         
