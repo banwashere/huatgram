@@ -27,12 +27,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
+        let okayAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        
         alertController.addAction(cancelAction)
+        
+        alertController.addAction(okayAction)
     
         alertController.addTextField(configurationHandler: {(textField: UITextField)-> Void in
             textField.placeholder = "Email"
             textField.keyboardType = UIKeyboardType.emailAddress
 
+            })
+        
+        alertController.addTextField(configurationHandler: {(textField: UITextField)-> Void in textField.placeholder = "Password"
+            textField.isSecureTextEntry = true
+            
             })
         
         self.present(alertController, animated: true, completion: nil)
