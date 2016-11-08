@@ -23,6 +23,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         downloadDataFirebase()
         
+        let alertController = UIAlertController(title: "Welcome", message: "Hello!", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+        
 //        createTestData()
         
         // Do any additional setup after loading the view.
