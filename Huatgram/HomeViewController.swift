@@ -22,7 +22,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         huatTableView.dataSource = self
         
         downloadDataFirebase()
-        
+        //show popup upon loading
         let alertController = UIAlertController(title: "Welcome", message: "Hello!", preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
