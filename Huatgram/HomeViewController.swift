@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import UserNotifications
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
@@ -69,6 +70,26 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 //        createTestData()
         
         // Do any additional setup after loading the view.
+        
+        
+        
+        //set up local notifications
+        let huatDate = NSDateComponents()
+        huatDate.hour = 21
+        huatDate.minute = 09
+        let trigger = UNCalendarNotificationTrigger.init(dateMatching: huatDate as DateComponents, repeats: true)
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Huat!"
+        content.body = "Do you want to huat?"
+        content.sound = UNNotificationSound.default()
+        content.badge = (UIApplication.shared.applicationIconBadgeNumber) + 1 as NSNumber
+        content.categoryIdentifier = "com.huat.localNotification"
+        let request = UNNotificationRequest.init(identifier: "Huat2100", content: content, trigger: trigger)
+    
+        let center = UNUserNotificationCenter.current()
+        center.add(request)
+        
     }
 
     override func didReceiveMemoryWarning() {
