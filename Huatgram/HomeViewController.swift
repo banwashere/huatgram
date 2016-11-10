@@ -27,7 +27,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
-        let okayAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+//        let okayAction = UIAlertAction(title: "Okay", style: .default, handler: goToNextPage())
+
+        let okayAction = UIAlertAction(title: "Okay", style: .default ){
+            
+            (action) in
+            //start of your code
+            self.goToNextPage()
+            //end of your code
+        }
+        
         
         alertController.addAction(cancelAction)
         
@@ -133,6 +142,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         })
     
+    }
+    
+    func goToNextPage(){
+        
+        performSegue(withIdentifier: "toNext", sender: nil)
     }
 
 }
