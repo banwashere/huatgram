@@ -90,7 +90,27 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let center = UNUserNotificationCenter.current()
         center.add(request)
         
+        
+        //set up a time interval notifcation 
+        
+        let trigger2 = UNTimeIntervalNotificationTrigger.init(timeInterval: 30, repeats: false)
+        
+        let content2 = UNMutableNotificationContent()
+        content2.title = "Huat! Huat!"
+        content2.body = "Today your turn to huat!"
+        content2.sound = UNNotificationSound.default()
+        content2.badge = (UIApplication.shared.applicationIconBadgeNumber) + 1 as NSNumber
+        content2.categoryIdentifier = "com.huathuat.identifier2"
+
+        let request2 = UNNotificationRequest.init(identifier: "Huat2101", content: content2, trigger: trigger2)
+        
+        
+        //Dont need two notification centers, no point.
+        center.add(request2)
     }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
