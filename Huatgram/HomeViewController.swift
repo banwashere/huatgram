@@ -74,39 +74,39 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         
         //set up local notifications
-        let huatDate = NSDateComponents()
-        huatDate.hour = 21
-        huatDate.minute = 09
-        let trigger = UNCalendarNotificationTrigger.init(dateMatching: huatDate as DateComponents, repeats: true)
-        
-        let content = UNMutableNotificationContent()
-        content.title = "Huat!"
-        content.body = "Do you want to huat?"
-        content.sound = UNNotificationSound.default()
-        content.badge = (UIApplication.shared.applicationIconBadgeNumber) + 1 as NSNumber
-        content.categoryIdentifier = "com.huat.localNotification"
-        let request = UNNotificationRequest.init(identifier: "Huat2100", content: content, trigger: trigger)
-    
-        let center = UNUserNotificationCenter.current()
-        center.add(request)
-        
-        
-        //set up a time interval notifcation 
-        
-        let trigger2 = UNTimeIntervalNotificationTrigger.init(timeInterval: 30, repeats: false)
-        
-        let content2 = UNMutableNotificationContent()
-        content2.title = "Huat! Huat!"
-        content2.body = "Today your turn to huat!"
-        content2.sound = UNNotificationSound.default()
-        content2.badge = (UIApplication.shared.applicationIconBadgeNumber) + 1 as NSNumber
-        content2.categoryIdentifier = "com.huathuat.identifier2"
-
-        let request2 = UNNotificationRequest.init(identifier: "Huat2101", content: content2, trigger: trigger2)
-        
-        
-        //Dont need two notification centers, no point.
-        center.add(request2)
+//            let huatDate = NSDateComponents()
+//            huatDate.hour = 21
+//            huatDate.minute = 09
+//            let trigger = UNCalendarNotificationTrigger.init(dateMatching: huatDate as DateComponents, repeats: true)
+//            
+//            let content = UNMutableNotificationContent()
+//            content.title = "Huat!"
+//            content.body = "Do you want to huat?"
+//            content.sound = UNNotificationSound.default()
+//            content.badge = (UIApplication.shared.applicationIconBadgeNumber) + 1 as NSNumber
+//            content.categoryIdentifier = "com.huat.localNotification"
+//            let request = UNNotificationRequest.init(identifier: "Huat2100", content: content, trigger: trigger)
+//        
+//            let center = UNUserNotificationCenter.current()
+//            center.add(request)
+//            
+//            
+//            //set up a time interval notifcation 
+//            
+//            let trigger2 = UNTimeIntervalNotificationTrigger.init(timeInterval: 30, repeats: false)
+//            
+//            let content2 = UNMutableNotificationContent()
+//            content2.title = "Huat! Huat!"
+//            content2.body = "Today your turn to huat!"
+//            content2.sound = UNNotificationSound.default()
+//            content2.badge = (UIApplication.shared.applicationIconBadgeNumber) + 1 as NSNumber
+//            content2.categoryIdentifier = "com.huathuat.identifier2"
+//
+//            let request2 = UNNotificationRequest.init(identifier: "Huat2101", content: content2, trigger: trigger2)
+//            
+//            
+//            //Dont need two notification centers, no point.
+//            center.add(request2)
     }
     
     

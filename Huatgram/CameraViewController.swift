@@ -7,13 +7,28 @@
 //
 
 import UIKit
+import AVFoundation
+import CameraManager
 
 class CameraViewController: UIViewController {
+
+  
+    let cameraManager = CameraManager()
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        _ = cameraManager.addPreviewLayerToView(self.view)
+        cameraManager.cameraDevice = .front
+        //cameraManager.cameraDevice = .back
+        cameraManager.cameraOutputMode = .videoWithMic
+        cameraManager.cameraOutputQuality = .low
+        cameraManager.flashMode = .auto
+        cameraManager.showAccessPermissionPopupAutomatically = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,4 +47,7 @@ class CameraViewController: UIViewController {
     }
     */
 
+    @IBAction func takeVideoAction(_ sender: AnyObject) {
+        cameraManager.startRecordingVideo()
+    }
 }

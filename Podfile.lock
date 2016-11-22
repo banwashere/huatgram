@@ -1,4 +1,5 @@
 PODS:
+  - CameraManager (3.0.0)
   - Firebase/Auth (3.9.0):
     - Firebase/Core
     - FirebaseAuth (= 3.0.6)
@@ -47,6 +48,7 @@ PODS:
   - KFSwiftImageLoader (3.0.0)
 
 DEPENDENCIES:
+  - CameraManager
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -54,6 +56,7 @@ DEPENDENCIES:
   - KFSwiftImageLoader
 
 SPEC CHECKSUMS:
+  CameraManager: 8b92bc0ab51b598d9a4c01998bc9f1efb9b681bf
   Firebase: ff77ffb77b317c3720fef57a60e9335cebf962e6
   FirebaseAnalytics: 6e58fc9b397664369ac7617fb0ba93fab6ba7b5b
   FirebaseAuth: 96e9674ff31d6e1f826d53e26aa003a57cab0295
@@ -67,6 +70,6 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
   KFSwiftImageLoader: c4656d614329480308b190c2b6f15015a4018ffc
 
-PODFILE CHECKSUM: ddb10a75822d2b1b0839f9bac9a44504c2b57b1c
+PODFILE CHECKSUM: 0cc6706d46a9415ccc3032df64036d281bbba986
 
 COCOAPODS: 1.1.1

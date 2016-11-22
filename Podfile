@@ -11,4 +11,5 @@ target 'Huatgram' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'KFSwiftImageLoader'
+  pod 'CameraManager'
 end

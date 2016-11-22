@@ -20,10 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         
-        let center = UNUserNotificationCenter.current()
+        /*let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.badge, .alert], completionHandler: {(granted, error) in
-            
-        })
+ 
+        })*/
+    
 
         
         
