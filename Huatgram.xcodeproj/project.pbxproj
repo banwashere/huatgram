@@ -25,6 +25,7 @@
 		8573D35C1DCDB6FE0010F2C6 /* HuatPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573D35A1DCDB6FE0010F2C6 /* HuatPost.swift */; };
 		91912B59AB45396A971D43F1 /* Pods_Huatgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA365758DEBD9E621AA62763 /* Pods_Huatgram.framework */; };
 		A37D8BCE1DCDBC2600A8FF38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A37D8BCD1DCDBC2600A8FF38 /* GoogleService-Info.plist */; };
+		A3DF5FFF1DE7137700368D5F /* SendCommentPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF5FFE1DE7137700368D5F /* SendCommentPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		8573D35A1DCDB6FE0010F2C6 /* HuatPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuatPost.swift; sourceTree = "<group>"; };
 		A29E44EDFCB1B7965F7D7337 /* Pods-Huatgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huatgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Huatgram/Pods-Huatgram.release.xcconfig"; sourceTree = "<group>"; };
 		A37D8BCD1DCDBC2600A8FF38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A3DF5FFE1DE7137700368D5F /* SendCommentPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendCommentPhotoViewController.swift; sourceTree = "<group>"; };
 		FA365758DEBD9E621AA62763 /* Pods_Huatgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Huatgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				670262C61DCDAF69000FEC48 /* SideBarViewController.swift */,
 				670262C81DCDAF8E000FEC48 /* CustomNavBar.swift */,
 				670262CA1DCDB257000FEC48 /* CameraViewController.swift */,
+				A3DF5FFE1DE7137700368D5F /* SendCommentPhotoViewController.swift */,
 				670262CC1DCDD033000FEC48 /* HuatPostTableViewCell.swift */,
 			);
 			path = Huatgram;
@@ -254,6 +257,7 @@
 				670262C11DCDAECF000FEC48 /* HomeViewController.swift in Sources */,
 				670262CD1DCDD033000FEC48 /* HuatPostTableViewCell.swift in Sources */,
 				670262AD1DCC90E6000FEC48 /* SplashViewController.swift in Sources */,
+				A3DF5FFF1DE7137700368D5F /* SendCommentPhotoViewController.swift in Sources */,
 				670262C91DCDAF8E000FEC48 /* CustomNavBar.swift in Sources */,
 				8573D35C1DCDB6FE0010F2C6 /* HuatPost.swift in Sources */,
 				670262BF1DCDAEBD000FEC48 /* LoginPasswordViewController.swift in Sources */,

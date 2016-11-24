@@ -81,8 +81,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="3SN-dM-IiN" kind="relationship" relationship="viewControllers" id="H4M-ch-xqZ"/>
-                        <segue destination="10g-k1-Rve" kind="relationship" relationship="viewControllers" id="W1N-6m-fYh"/>
                         <segue destination="kbt-b2-BjK" kind="relationship" relationship="viewControllers" id="8th-FB-NNr"/>
+                        <segue destination="1zm-zv-JjW" kind="relationship" relationship="viewControllers" id="tTQ-km-GuF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tV-bE-FU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -261,21 +261,90 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cf8-8T-Xsq">
-                                <frame key="frameInset" minX="150" minY="552" width="74" height="30"/>
+                                <frame key="frameInset" minX="125" minY="538" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Take video"/>
+                                <state key="normal" title="Take Picture"/>
                                 <connections>
-                                    <action selector="takeVideoAction:" destination="10g-k1-Rve" eventType="touchUpInside" id="k24-JJ-YRg"/>
+                                    <segue destination="FEW-Dc-n1e" kind="show" id="C2V-9X-Ctu"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="photoCamera1" id="8TQ-4u-qNK"/>
+                    <navigationItem key="navigationItem" id="F6y-ZC-Xru"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxb-zA-ahf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4361" y="1071"/>
+            <point key="canvasLocation" x="3399" y="1109"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="BzY-UX-J1E">
+            <objects>
+                <navigationController id="1zm-zv-JjW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Camera" image="photoCamera1" id="t3s-OG-RW1"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Ko-p6-ri2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="10g-k1-Rve" kind="relationship" relationship="rootViewController" id="aED-vy-Cek"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSD-9f-aCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2690" y="1109"/>
+        </scene>
+        <!--Send Comment Photo View Controller-->
+        <scene sceneID="qkS-4g-zgN">
+            <objects>
+                <viewController id="FEW-Dc-n1e" customClass="SendCommentPhotoViewController" customModule="Huatgram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dE2-kO-ixE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qbl-wj-vap"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E56-7V-q0D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hwI-y6-A2S">
+                                <frame key="frameInset" minX="29" minY="158" width="177" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Epl-AB-xRr">
+                                <frame key="frameInset" minX="29" minY="225" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaW-GS-Ejc">
+                                <frame key="frameInset" minX="29" minY="378" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePic:" destination="FEW-Dc-n1e" eventType="touchUpInside" id="pTI-dp-nYQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e10-V4-Umr">
+                                <frame key="frameInset" minX="288" minY="432" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="sendToFirebase:" destination="FEW-Dc-n1e" eventType="touchUpInside" id="1WA-o7-Uil"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="commenttxt" destination="hwI-y6-A2S" id="Vjm-Eb-e2t"/>
+                        <outlet property="photo" destination="Epl-AB-xRr" id="zvC-Dv-Bf1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ga1-hY-gmO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4245.6000000000004" y="1108.6956521739132"/>
         </scene>
         <!--Profile-->
         <scene sceneID="u8u-h1-88e">
@@ -352,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBX-lt-cEV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4253.6000000000004" y="1814.8425787106448"/>
+            <point key="canvasLocation" x="4558" y="1943"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="i3q-j0-LqI">

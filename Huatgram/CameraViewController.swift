@@ -10,12 +10,12 @@ import UIKit
 import AVFoundation
 import CameraManager
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate {
 
   
     let cameraManager = CameraManager()
 
-
+    var imagePicker = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +24,9 @@ class CameraViewController: UIViewController {
         _ = cameraManager.addPreviewLayerToView(self.view)
         cameraManager.cameraDevice = .front
         //cameraManager.cameraDevice = .back
-        cameraManager.cameraOutputMode = .videoWithMic
-        cameraManager.cameraOutputQuality = .low
+        //cameraManager.cameraOutputMode = .videoWithMic
+        cameraManager.cameraOutputMode = .stillImage
+        cameraManager.cameraOutputQuality = .high
         cameraManager.flashMode = .auto
         cameraManager.showAccessPermissionPopupAutomatically = true
         
@@ -48,6 +49,14 @@ class CameraViewController: UIViewController {
     */
 
     @IBAction func takeVideoAction(_ sender: AnyObject) {
-        cameraManager.startRecordingVideo()
+        //cameraManager.startRecordingVideo()
+        /*cameraManager.capturePictureWithCompletion { (result, error) in
+            if result != nil {
+                
+                self.performSegue(withIdentifier: "goToSinglePic", sender: nil)
+            }
+        }*/
+        
     }
+    
 }
